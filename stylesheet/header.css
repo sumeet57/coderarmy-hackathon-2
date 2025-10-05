@@ -1,0 +1,142 @@
+header {
+  background-color: #111;
+  height: fit-content;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  min-height: 80px;
+  position: relative;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+header nav .left {
+  font-size: 15px;
+  font-family: "Rampart One", sans-serif;
+  color: white;
+  z-index: 10;
+}
+
+header nav .right {
+  display: flex;
+  align-items: center;
+}
+
+header nav .right a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  font-family: "Workbench", sans-serif;
+  position: relative;
+  padding: 10px 0;
+}
+
+header nav .right a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  height: 2px;
+  background: white;
+  transition: transform 250ms ease-in-out;
+  transform-origin: center;
+}
+header nav .right a:hover::after {
+  transform: scaleX(1);
+}
+header nav .right a:hover {
+  color: orange;
+}
+
+header nav .fullNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(17, 17, 17, 0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 9;
+}
+
+header nav .fullNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 20px 0;
+  font-family: "Workbench", sans-serif;
+  transition: color 0.3s;
+}
+
+header nav .fullNav a:hover {
+  color: orange;
+}
+
+header nav .menuIcon {
+  display: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+header nav .menuIcon .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 2px;
+}
+
+#menu-toggle:checked ~ .fullNav {
+  transform: translateX(0);
+}
+
+#menu-toggle:checked ~ .menuIcon .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menuIcon .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menuIcon .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 600px) {
+  header nav {
+    padding: 0px 20px;
+  }
+  header nav .left {
+    font-size: 15px;
+  }
+  header nav .right {
+    display: none;
+  }
+  header nav .menuIcon {
+    display: block;
+  }
+}

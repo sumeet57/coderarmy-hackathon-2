@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rampart+One&family=Rubik+Glitch&family=Workbench&family=Zain:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="/stylesheet/header.css" />
+    <link rel="stylesheet" href="/stylesheet/home.css" />
+    <title>STRIKE</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Checkbox must be inside NAV for the sibling selector (~) to work with .fullNav and .menuIcon-->
+        <input type="checkbox" id="menu-toggle" hidden />
+
+        <div class="left">STRIKE</div>
+
+        <!-- Desktop Links -->
+        <div class="right">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#services">SERVICES</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+
+        <!-- Hamburger Icon (Label linked to the Checkbox) -->
+        <label for="menu-toggle" class="menuIcon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <!-- Mobile Full-Screen Menu -->
+        <div class="fullNav">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#services">SERVICES</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="s1">section 1</section>
+      <section class="s2">section 2</section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
