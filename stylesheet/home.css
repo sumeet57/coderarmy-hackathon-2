@@ -1,6 +1,7 @@
 main {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 main section {
@@ -8,7 +9,7 @@ main section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   text-align: center;
 }
@@ -53,11 +54,158 @@ main .s1 {
     normal;
   background-repeat: repeat;
   background-position: center center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+main #home .heading {
+  height: 40%;
+  width: 70%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+main #home h1 {
+  font-size: 3vw;
+  color: white;
+  font-family: "Rampart One", sans-serif;
+  font-weight: 50;
+
+  /* font-family: "Zain", sans-serif; */
+  text-transform: uppercase;
+  /* font-family: "Audiowide", sans-serif; */
+  letter-spacing: 5px;
+}
+
+main #home h1 .basics-span {
+  /* font-family: monospace; */
+  font-family: "Rampart One", sans-serif;
+  color: black;
+  letter-spacing: -1px;
+  font-weight: 900;
+  font-style: italic;
+}
+main #home h1 .basics-span::before {
+  content: "<";
+}
+main #home h1 .basics-span::after {
+  content: ">";
+}
+main #home h1 .high-span {
+  /* font-family: "Rubik Glitch", system-ui; */
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: black;
+}
+
+main #home .btns {
+  /* background-color: aqua; */
+  height: fit-content;
+  display: flex;
+  gap: 30px;
+  padding-top: 50px;
+}
+main #home .stats {
+  height: fit-content;
+  display: flex;
+  gap: 80px;
+  padding-top: 50px;
+}
+main #home .stats div {
+  color: white;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.2vw;
+  text-transform: capitalize;
+}
+
+.extra {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: black;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 500;
+  font-size: 1.2vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 2px; */
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  main #home .heading {
+    height: 40%;
+    width: 90%;
+  }
+  main #home h1 {
+    font-size: 5vw;
+    /* line-height: 1.2; */
+  }
+  main #home .btns {
+    font-size: 1vw;
+    gap: 20px;
+  }
+  main #home .stats {
+    gap: 30px;
+  }
+  main #home .stats div {
+    /* margin-top: 10px; */
+    font-size: 2vw;
+  }
+  .extra {
+    font-size: 2vw;
+    /* gap: 5px; */
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  main #home .heading {
+    height: 30%;
+    width: 90%;
+  }
+  main #home h1 {
+    font-size: 7vw;
+
+    /* line-height: 1.2; */
+  }
+  main #home .btns {
+    font-size: 2vw;
+    gap: 15px;
+  }
+  main #home .stats {
+    gap: 5vw;
+  }
+  main #home .stats div {
+    /* margin-top: 10px; */
+    font-size: 3vw;
+  }
+  .extra {
+    font-size: 3vw;
+    /* want this at center has absolute */
+    right: 40%;
+  }
 }
 
 main .s2 {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: white;
-  margin-top: -50px;
+  margin-top: -40px;
 }

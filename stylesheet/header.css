@@ -12,8 +12,8 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 50px;
-  min-height: 80px;
+  padding: 15px 50px;
+  min-height: fit-content;
   position: relative;
 }
 
@@ -22,8 +22,9 @@ header nav {
 }
 
 header nav .left {
-  font-size: 15px;
-  font-family: "Rampart One", sans-serif;
+  font-size: 30px;
+  /* font-family: "Rampart One", sans-serif; */
+  font-family: "Audiowide", sans-serif;
   color: white;
   z-index: 10;
 }
@@ -36,12 +37,28 @@ header nav .right {
 header nav .right a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-left: 20px;
-  font-family: "Workbench", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0px;
+  margin-left: 25px;
+  /* font-family: "Workbench", sans-serif; */
+  font-family: "Audiowide", sans-serif;
   position: relative;
   padding: 10px 0;
+}
+header nav .right a.live-nav {
+  background-color: red;
+  padding: 5px 20px;
+  border-radius: 20px;
+  animation: liveBlink-nav 1.5s infinite;
+}
+@keyframes liveBlink-nav {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
 }
 
 header nav .right a::after {
@@ -71,11 +88,14 @@ header nav .fullNav {
   width: 100%;
   height: 100vh;
   background-color: rgba(17, 17, 17, 0.98);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(100%);
+  transform: translateY(100%);
+  transform-origin: top;
   transition: transform 0.4s ease-in-out;
   z-index: 9;
 }
@@ -86,7 +106,8 @@ header nav .fullNav a {
   font-size: 30px;
   letter-spacing: 3px;
   margin: 20px 0;
-  font-family: "Workbench", sans-serif;
+  /* font-family: "Workbench", sans-serif; */
+  font-family: "Audiowide", sans-serif;
   transition: color 0.3s;
 }
 
@@ -102,8 +123,8 @@ header nav .menuIcon {
 
 header nav .menuIcon .bar {
   display: block;
-  width: 28px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   margin: 6px auto;
   transition: all 0.3s ease-in-out;
   background-color: white;
@@ -126,17 +147,30 @@ header nav .menuIcon .bar {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header nav {
-    padding: 0px 20px;
+    padding: 10px 15px;
   }
   header nav .left {
-    font-size: 15px;
+    font-size: 20px;
   }
   header nav .right {
     display: none;
   }
   header nav .menuIcon {
     display: block;
+  }
+  header nav .menuIcon .bar {
+    width: 15px;
+    height: 2px;
+    margin: 4px auto;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    padding: 10px 15px;
+  }
+  header nav .left {
+    font-size: 15px;
   }
 }
