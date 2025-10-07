@@ -1,10 +1,14 @@
+/* font-family: "Rampart One", sans-serif; */
+/* font-family: "Zain", sans-serif; */
+/* font-family: "Rubik Glitch", system-ui; */
+
 main {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-main section {
+main #home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,123 +17,78 @@ main section {
   width: 100%;
   text-align: center;
 }
-main .s1 {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1746 1746' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
-    radial-gradient(
-      circle at 0% 99%,
-      hsla(11, 100%, 50%, 1) 0%,
-      transparent 67%
-    ),
-    radial-gradient(
-      circle at 46% 94%,
-      hsla(177, 100%, 50%, 1) 0%,
-      transparent 81%
-    ),
-    radial-gradient(
-      circle at 89% 8%,
-      hsla(304, 100%, 9%, 1) 0%,
-      transparent 150%
-    ),
-    radial-gradient(
-      circle at 89% 8%,
-      hsla(206, 100%, 9%, 1) 0%,
-      transparent 150%
-    ),
-    radial-gradient(
-      circle at 93% 95%,
-      hsla(236, 100%, 23%, 1) 0%,
-      transparent 66%
-    ),
-    radial-gradient(
-      circle at 89% 8%,
-      hsla(0, 100%, 99%, 1) 0%,
-      transparent 150%
-    ),
-    radial-gradient(
-      circle at 89% 8%,
-      hsla(55, 94%, 54%, 1) 0%,
-      transparent 150%
-    );
-  background-blend-mode: overlay, normal, normal, normal, normal, normal, normal,
-    normal;
-  background-repeat: repeat;
-  background-position: center center;
+
+main #home .part1 {
+  height: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-}
-
-main #home .heading {
-  height: 40%;
-  width: 70%;
-  /* background-color: aqua; */
-  display: flex;
   justify-content: center;
   align-items: center;
-  justify-items: center;
+  gap: 20px;
+  h1 {
+    font-size: 4vw;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Audiowide", sans-serif;
+    text-shadow: 0px 0px 20px orange;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    animation: heading-glow 10s linear infinite;
+    margin-bottom: 0px;
+  }
+  h2 {
+    margin-top: 0px;
+    width: 80%;
+    font-size: 2vw;
+    color: white;
+    font-weight: 300;
+    font-family: "Zain", sans-serif;
+    line-height: 1.3;
+    letter-spacing: 2px;
+  }
 }
 
-main #home h1 {
-  font-size: 3vw;
-  color: white;
-  font-family: "Rampart One", sans-serif;
-  font-weight: 50;
-
-  /* font-family: "Zain", sans-serif; */
-  text-transform: uppercase;
-  /* font-family: "Audiowide", sans-serif; */
-  letter-spacing: 5px;
-}
-
-main #home h1 .basics-span {
-  /* font-family: monospace; */
-  font-family: "Rampart One", sans-serif;
-  color: black;
-  letter-spacing: -1px;
-  font-weight: 900;
-  font-style: italic;
-}
-main #home h1 .basics-span::before {
-  content: "<";
-}
-main #home h1 .basics-span::after {
-  content: ">";
-}
-main #home h1 .high-span {
-  /* font-family: "Rubik Glitch", system-ui; */
-  font-style: italic;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: black;
-}
-
-main #home .btns {
-  /* background-color: aqua; */
-  height: fit-content;
+main #home .part2 {
+  height: 30%;
+  width: 100%;
   display: flex;
-  gap: 30px;
-  padding-top: 50px;
-}
-main #home .stats {
-  height: fit-content;
-  display: flex;
-  gap: 80px;
-  padding-top: 50px;
-}
-main #home .stats div {
-  color: white;
-  text-align: center;
-  font-family: "Audiowide", sans-serif;
-  font-size: 1.2vw;
-  text-transform: capitalize;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: brown; */
+
+  .btns {
+    /* background-color: aqua; */
+    height: fit-content;
+    display: flex;
+    gap: 30px;
+    padding-top: 50px;
+  }
+
+  .stats {
+    height: fit-content;
+    display: flex;
+    gap: 80px;
+    padding-top: 10px;
+  }
+  .stats div {
+    color: white;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1.2vw;
+    text-transform: capitalize;
+  }
 }
 
 .extra {
   position: absolute;
   bottom: 50px;
   right: 50px;
-  color: black;
+  color: #fff;
   font-family: "Audiowide", sans-serif;
   font-weight: 500;
   font-size: 1.2vw;
@@ -149,25 +108,48 @@ main #home .stats div {
   }
 }
 
+@keyframes heading-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 20px #00ffff;
+  }
+  20% {
+    text-shadow: 0 0 35px #00ff99;
+  }
+  40% {
+    text-shadow: 0 0 20px #00ff00;
+  }
+  60% {
+    text-shadow: 0 0 30px #00ff99;
+  }
+  80% {
+    text-shadow: 0 0 10px #00ffff;
+  }
+}
+
 @media (max-width: 768px) {
-  main #home .heading {
+  main #home .part1 {
     height: 40%;
     width: 90%;
+    h1 {
+      font-size: 7vw;
+    }
+    h2 {
+      font-size: 4vw;
+    }
   }
-  main #home h1 {
-    font-size: 5vw;
-    /* line-height: 1.2; */
-  }
-  main #home .btns {
-    font-size: 1vw;
-    gap: 20px;
-  }
-  main #home .stats {
-    gap: 30px;
-  }
-  main #home .stats div {
-    /* margin-top: 10px; */
-    font-size: 2vw;
+  main #home .part2 {
+    .btns {
+      font-size: 1vw;
+      gap: 20px;
+    }
+    .stats {
+      gap: 30px;
+    }
+    .stats div {
+      /* margin-top: 10px; */
+      font-size: 2vw;
+    }
   }
   .extra {
     font-size: 2vw;
@@ -176,36 +158,32 @@ main #home .stats div {
   }
 }
 @media (max-width: 500px) {
-  main #home .heading {
+  main #home .part1 {
     height: 30%;
     width: 90%;
+    h1 {
+      font-size: 8vw;
+    }
+    h2 {
+      font-size: 5vw;
+    }
   }
-  main #home h1 {
-    font-size: 7vw;
-
-    /* line-height: 1.2; */
+  main #home .part2 {
+    .btns {
+      font-size: 2vw;
+      gap: 15px;
+    }
+    .stats {
+      padding-top: 50px;
+      gap: 5vw;
+    }
+    .stats div {
+      /* margin-top: 10px; */
+      font-size: 3vw;
+    }
   }
-  main #home .btns {
-    font-size: 2vw;
-    gap: 15px;
-  }
-  main #home .stats {
-    gap: 5vw;
-  }
-  main #home .stats div {
-    /* margin-top: 10px; */
+  main #home .extra {
     font-size: 3vw;
+    right: inherit;
   }
-  .extra {
-    font-size: 3vw;
-    /* want this at center has absolute */
-    right: 40%;
-  }
-}
-
-main .s2 {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  background-color: white;
-  margin-top: -40px;
 }

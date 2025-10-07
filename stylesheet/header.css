@@ -149,7 +149,7 @@ header nav .menuIcon .bar {
 
 @media (max-width: 768px) {
   header nav {
-    padding: 10px 15px;
+    padding: 15px 15px;
   }
   header nav .left {
     font-size: 20px;
@@ -161,14 +161,15 @@ header nav .menuIcon .bar {
     display: block;
   }
   header nav .menuIcon .bar {
-    width: 15px;
+    width: 18px;
     height: 2px;
     margin: 4px auto;
+    margin-right: 5px;
   }
 }
 @media (max-width: 500px) {
   header nav {
-    padding: 10px 15px;
+    padding: 20px 15px;
   }
   header nav .left {
     font-size: 15px;
