@@ -22,11 +22,24 @@ header nav {
 }
 
 header nav .left {
-  font-size: 30px;
+  max-height: 45px;
+  font-size: 20px;
+  /* background-color: aqua; */
   /* font-family: "Rampart One", sans-serif; */
   font-family: "Audiowide", sans-serif;
   color: white;
   z-index: 10;
+
+  /* img {
+    object-fit: contain;
+    height: 40px;
+    width: 50px;
+    background-color: yellow;
+  } */
+
+  p {
+    margin: 0px;
+  }
 }
 
 header nav .right {
@@ -169,7 +182,7 @@ header nav .menuIcon .bar {
 }
 @media (max-width: 500px) {
   header nav {
-    padding: 20px 15px;
+    padding: 20px 10px;
   }
   header nav .left {
     font-size: 15px;

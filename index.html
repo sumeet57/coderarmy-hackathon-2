@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rampart+One&family=Rubik+Glitch&family=Workbench&family=Zain:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Notable&family=Rampart+One&family=Rubik+Glitch&family=Workbench&family=Zain:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -32,7 +32,13 @@
         <!-- Checkbox must be inside NAV for the sibling selector (~) to work with .fullNav and .menuIcon-->
         <input type="checkbox" id="menu-toggle" hidden />
 
-        <div class="left">STRIKE</div>
+        <div class="left">
+          <!-- <img
+            src="/assets/14a41f92-f694-4348-8c9f-0b42e0197539-Photoroom.png"
+            alt=""
+          /> -->
+          <p>STRIKE</p>
+        </div>
 
         <!-- Desktop Links -->
         <div class="right">
@@ -61,99 +67,32 @@
     </header>
     <main>
       <section class="s1" id="home">
-        <div class="heading part1">
-          <h1>
-            Strike Now.<br />
-            Build the Future.
-          </h1>
-          <h2>
-            A community of coders, making the world a better place. Learn,
-            build, and grow with the best developers in the industry.
-          </h2>
+        <div class="part1">
+          <h1 data-content="STRIKE">STRIKE</h1>
         </div>
         <div class="part2">
-          <div class="btns">
-            <button href="#" class="button" style="--clr: #333">
-              <span class="button__icon-wrapper">
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="button__icon-svg"
-                  width="10"
-                >
-                  <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  width="10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="button__icon-svg button__icon-svg--copy"
-                >
-                  <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </span>
-              Paid Courses
-            </button>
-
-            <button href="#" class="button" style="--clr: #ff3a33">
-              <span class="button__icon-wrapper">
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="button__icon-svg"
-                  width="10"
-                >
-                  <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  width="10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="button__icon-svg button__icon-svg--copy"
-                >
-                  <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </span>
-              Watch Demo
-              <span class="icon-yt"><i class="ri-youtube-fill"></i></span>
-            </button>
+          <div class="model">
+            <img src="/assets/home/rohitmodel.png" alt="" />
           </div>
-          <div class="stats">
+          <div class="text">
+            <h1>
+              Master DSA, Gen AI & Level Up Your Skills with Premium Courses
+            </h1>
+            <h2>
+              STRIKE is our upcoming paid course platform
+              <span>featuring DSA</span>, <span>Generative AI</span>, and
+              <span>interview-focused</span>
+              programs. Project-based learning with mentor support and placement
+              assistance.
+            </h2>
+
             <div>
-              <p>
-                200+ <br />
-                Students taught
-              </p>
-            </div>
-            <div>
-              <p>
-                4+ <br />
-                Courses
-              </p>
-            </div>
-            <div>
-              <p>212k+ <br />Youtube Subs</p>
+              <button class="button" data-bg="red">Check Courses &rarr;</button>
+              <button class="button">Watch Demo &rarr;</button>
             </div>
           </div>
         </div>
+
         <div class="extra">
           <i class="ri-arrow-down-line"></i>
           Scroll
@@ -182,10 +121,11 @@
           <div class="part2inside">
             <div class="card">
               <div class="imgcont">
-                <img
+                <!-- <img
                   src="/assets/about/1.png"
                   alt="Structured DSA & Interview Preparation"
-                />
+                /> -->
+                <span>⚙️</span>
               </div>
               <p>
                 <span>Structured DSA & Interview Preparation</span> curriculum
@@ -199,18 +139,20 @@
                 real-world applications using cutting-edge AI technologies.
               </p>
               <div class="imgcont">
-                <img
+                <!-- <img
                   src="/assets/about/2.png"
                   alt="Generative AI Projects & Labs"
-                />
+                /> -->
+                <span> 🤖 </span>
               </div>
             </div>
             <div class="card">
               <div class="imgcont">
-                <img
+                <!-- <img
                   src="/assets/about/3.png"
                   alt="Mock Interviews & Career Guidance"
-                />
+                /> -->
+                <span> 🎯 </span>
               </div>
               <p>
                 <span>Mock interviews and career guidance</span> from industry
@@ -224,10 +166,11 @@
                 to help you showcase your skills and land your dream job.
               </p>
               <div class="imgcont">
-                <img
+                <!-- <img
                   src="/assets/about/4.png"
                   alt="Certificate & Placement Assistance"
-                />
+                /> -->
+                <span> 🎓 </span>
               </div>
             </div>
           </div>

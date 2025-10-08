@@ -4,7 +4,7 @@
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: white;
-  margin-top: -50px;
+  margin-top: -0px;
   padding-bottom: 100px;
 }
 
@@ -12,7 +12,6 @@
   font-size: 4vw;
   font-family: "Audiowide", sans-serif;
   display: flex;
-
   color: black;
   text-transform: uppercase;
   white-space: nowrap;
@@ -20,6 +19,7 @@
   box-sizing: border-box;
   animation: reveal 1s ease forwards;
   animation-timeline: view();
+  /* gap: -10px; */
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
@@ -32,8 +32,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     animation: moveText 20s linear infinite;
+  }
+  ul:first-child {
+    /* background-color: lightpink; */
+  }
+  ul:last-child {
+    /* background-color: yellow; */
   }
   ul li {
     list-style: none;
@@ -70,12 +76,13 @@
 
 #about .part2inside {
   height: fit-content;
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
+  /* background-color: turquoise; */
 
   .card {
     display: flex;
@@ -95,6 +102,9 @@
         height: auto;
         border-radius: 20px;
       }
+      span {
+        font-size: 5.5vw;
+      }
     }
     .imgcont:nth-child(even) {
       text-align: left;
@@ -103,7 +113,7 @@
       font-family: "Zain", sans-serif;
       /* background-color: lightgreen; */
       width: 50%;
-      font-size: 1.4vw;
+      font-size: 2.2vw;
       span {
         font-weight: 900;
         text-decoration: underline;
@@ -156,5 +166,50 @@
   }
   to {
     height: 100%;
+  }
+}
+
+@media (max-width: 968px) {
+  #about .part2inside {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #about .infinite-text {
+    font-size: 6vw;
+  }
+  #about .part2inside {
+    width: 80%;
+
+    .card {
+      .imgcont {
+        span {
+          font-size: 12vw;
+        }
+      }
+      p {
+        font-size: 3vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  #about .infinite-text {
+    font-size: 8vw;
+  }
+  #about .part2inside {
+    width: 90%;
+    .card {
+      imgcont {
+        span {
+          font-size: 40vw;
+        }
+      }
+      p {
+        font-size: 4vw;
+      }
+    }
   }
 }
