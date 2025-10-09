@@ -1,3 +1,7 @@
+/* font-family: "Rampart One", sans-serif; */
+/* font-family: "Zain", sans-serif; */
+/* font-family: "Rubik Glitch", system-ui; */
+
 #about {
   height: fit-content;
   width: 100%;
@@ -10,6 +14,7 @@
 
 #about .infinite-text {
   font-size: 4vw;
+
   font-family: "Audiowide", sans-serif;
   display: flex;
   color: black;
@@ -66,153 +71,110 @@
 }
 
 #about .part2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  /* background-color: aqua; */
-  position: relative;
-}
-
-#about .part2inside {
+  width: 100%;
   height: fit-content;
-  width: 70%;
+  margin: auto;
+  margin-top: 0px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 40px;
-  /* background-color: turquoise; */
-
-  .card {
+  .text {
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
-    animation: eachCardReveal 1s both;
-    animation-timeline: view();
-
-    .imgcont {
-      /* background-color: aqua; */
-      width: 50%;
-      text-align: right;
-
-      img {
-        width: 40%;
-        height: auto;
-        border-radius: 20px;
-      }
-      span {
-        font-size: 5.5vw;
-        /* background-color: aqua; */
-      }
-    }
-    .imgcont:nth-child(even) {
-      text-align: left;
-    }
     p {
-      font-family: "Zain", sans-serif;
-      /* background-color: lightgreen; */
-      width: 50%;
-      font-size: 2.2vw;
-      span {
-        font-weight: 900;
-        text-decoration: underline;
-        color: blueviolet;
+      font-size: 2.5vw;
+      font-weight: 100;
+      font-family: "Audiowide", sans-serif;
+      color: black;
+      animation: text-reveal 2s ease forwards;
+      overflow: hidden;
+      visibility: hidden;
+      animation-timeline: view(50% 0%);
+      /* background-color: aquamarine; */
+    }
+  }
+  .stat {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      animation: stat-reveal 1s ease forwards;
+      overflow: hidden;
+      visibility: hidden;
+      animation-timeline: view(100% 0%);
+      transform-origin: left;
+      h1 {
+        margin: 0px;
+        font-size: 3vw;
+        font-weight: 400;
+        font-family: "Zain", sans-serif;
+      }
+      h2 {
+        margin: 0px;
+        font-size: 2vw;
+        font-weight: 400;
+        font-family: "Zain", sans-serif;
+      }
+      p {
+        margin: 0px;
+        font-size: 1.5vw;
+        font-weight: 100;
+        font-family: "Audiowide", sans-serif;
       }
     }
   }
-
-  .card:nth-child(1) {
-    animation-range: entry 20% cover 40%;
-  }
-  .card:nth-child(2) {
-    animation-range: entry 40% cover 60%;
-  }
-  .card:nth-child(3) {
-    animation-range: entry 60% cover 80%;
-  }
-  .card:nth-child(4) {
-    animation-range: entry 30% cover 50%;
-  }
 }
 
-#about .part2 .vertLine {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background-color: black;
-  border-radius: 30px;
-  /* animation: lineGrow 5s both; */
-  /* animation-timeline: view(); */
-  /* animation-range: entry 40% cover 100%; */
-}
-
-@keyframes eachCardReveal {
+@keyframes text-reveal {
   from {
-    transform: translateY(20px) scale(0.5);
-    opacity: 0;
+    visibility: visible;
+    background-color: #000;
+    width: 0%;
   }
   to {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    width: 100%;
   }
 }
-@keyframes lineGrow {
+
+@keyframes stat-reveal {
   from {
-    height: 0%;
+    visibility: visible;
+    transform: scaleX(0);
   }
   to {
-    height: 100%;
+    visibility: visible;
+    transform: scaleX(1);
   }
 }
 
 @media (max-width: 968px) {
-  #about .part2inside {
-    gap: 10px;
-  }
 }
 
 @media (max-width: 768px) {
   #about .infinite-text {
     font-size: 6vw;
   }
-  #about .part2inside {
-    width: 80%;
-
-    .card {
-      .imgcont {
-        span {
-          font-size: 12vw;
-        }
-      }
-      p {
-        font-size: 3vw;
-      }
-    }
-  }
 }
 
 @media (max-width: 568px) {
   #about .infinite-text {
     font-size: 8vw;
-  }
-  #about .part2inside {
-    width: 90%;
-    .card {
-      gap: 30px;
-      .imgcont {
-        span {
-          font-size: 16vw;
-          /* background-color: aqua; */
-        }
-      }
-      p {
-        font-size: 4vw;
-      }
-    }
   }
 }
