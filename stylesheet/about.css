@@ -3,7 +3,7 @@
   width: 100%;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  background-color: white;
+  background-color: beige;
   margin-top: -0px;
   padding-bottom: 100px;
 }
@@ -104,6 +104,7 @@
       }
       span {
         font-size: 5.5vw;
+        /* background-color: aqua; */
       }
     }
     .imgcont:nth-child(even) {
@@ -202,9 +203,11 @@
   #about .part2inside {
     width: 90%;
     .card {
-      imgcont {
+      gap: 30px;
+      .imgcont {
         span {
-          font-size: 40vw;
+          font-size: 16vw;
+          /* background-color: aqua; */
         }
       }
       p {

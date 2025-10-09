@@ -301,6 +301,9 @@ main #home .part2 {
   }
 }
 @media (max-width: 500px) {
+  main #home {
+    width: 95%;
+  }
   main #home .part1 {
     h1 {
       font-size: 22vw;
@@ -314,10 +317,11 @@ main #home .part2 {
     .model {
       img {
         height: 130%;
+        /* width: 100%; */
       }
     }
     .text {
-      width: 95%;
+      width: 100%;
       h1 {
         /* margin: 0px; */
         font-size: 5vw;
