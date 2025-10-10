@@ -4,7 +4,7 @@
   --hover-text: #000;
   color: #fff;
   cursor: pointer;
-  border: 1px solid var(--bg);
+  border: 1px solid #d2d2d2;
   border-radius: 12px;
   padding: 0.8em 2em;
   background: var(--bg);
