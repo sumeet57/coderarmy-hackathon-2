@@ -52,7 +52,7 @@ main #home .part2 {
       transparent 150%
     );
   background-blend-mode: overlay, normal, normal, normal, normal;
-  animation: home-slideup 1s linear;
+  animation: home-slideup 1.5s linear;
   padding: 20px 0px;
 
   .model {
@@ -71,7 +71,7 @@ main #home .part2 {
       object-fit: cover;
       visibility: hidden;
       animation: float 4s infinite alternate, fadeIn 1s ease-in-out forwards;
-      animation-delay: 1s;
+      animation-delay: 400ms;
     }
   }
 
@@ -279,7 +279,7 @@ main #home .part2 {
   }
 
   100% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
 }
 

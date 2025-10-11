@@ -227,7 +227,6 @@
         flex-direction: column;
         gap: 20px;
         padding: 10px;
-        /* REMOVED: opacity: 0; */
 
         img {
           width: 50%;
@@ -331,14 +330,14 @@
       animation: stat-reveal 4s ease forwards;
       animation-timeline: view(50% 20%);
 
-      h1 {
+      h2 {
         margin: 0px;
         font-size: 3vw;
         font-weight: 400;
         font-family: "Zain", sans-serif;
         color: white;
       }
-      h2 {
+      h3 {
         margin: 0px;
         font-size: 1.5vw;
         font-weight: 400;
@@ -493,10 +492,10 @@
       gap: 20px;
       width: 60%;
       div {
-        h1 {
+        h2 {
           font-size: 4vw;
         }
-        h2 {
+        h3 {
           font-size: 2.5vw;
         }
       }
@@ -571,10 +570,10 @@
       gap: 20px;
       width: 80%;
       div {
-        h1 {
+        h2 {
           font-size: 5.5vw;
         }
-        h2 {
+        h3 {
           font-size: 3.5vw;
         }
       }
