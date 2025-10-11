@@ -1,0 +1,312 @@
+#course {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: white;
+  padding: 0px 20px;
+  padding-bottom: 100px;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+#course:has(.card:hover) {
+  /* want many oranges shades gradient */
+  background: linear-gradient(45deg, orange, darkorange, orangered);
+  transition: all 600ms ease;
+  /* overflow-x: hidden; */
+}
+
+#course .text {
+  text-align: left;
+  font-size: 35px;
+  font-family: "Audiowide", sans-serif;
+  color: black;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+#course .cards {
+  width: 70%;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  .card {
+    background-image: linear-gradient(
+      43deg,
+      #2f3c7d 0%,
+      #683965 46%,
+      #6d5e44 100%
+    );
+    color: white;
+    width: 300px;
+    /* text-wrap: nowrap; */
+    height: fit-content;
+    z-index: 10;
+    /* margin-right: 30px; */
+    padding: 20px;
+    /* border-radius: 20px; */
+    box-shadow: 10px 10px 2px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: show 1s linear;
+    animation-timeline: view(100% -10%);
+    /* visibility: hidden; */
+    transform: rotate(4deg);
+
+    .extra-info {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-family: "Audiowide", sans-serif;
+      /* font-family: "Zain", sans-serif; */
+
+      span {
+        background-color: thistle;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 0.8vw;
+      }
+    }
+
+    .imgcont {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.5vw;
+      padding: 5px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-family: "Bebas Neue", sans-serif;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1.2vw;
+      padding: 5px;
+      font-family: "Zain", sans-serif;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      span {
+        background-color: greenyellow;
+        font-family: "Zain", sans-serif;
+        text-transform: capitalize;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 0.8vw;
+        margin-right: 10px;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+
+      p {
+        font-family: "Audiowide", sans-serif;
+      }
+
+      .btn {
+        width: 100%;
+        /* golden shinny gradient  */
+        background-image: linear-gradient(
+          45deg,
+          #ffdd00,
+          #ffc700,
+          #ffb200,
+          #ffa000,
+          #ff8f00,
+          #ff7f00
+        );
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 1vw;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "Audiowide", sans-serif;
+
+        &:hover {
+          background-color: darkred;
+          transform: translate(-0.23rem, -0.23rem);
+          box-shadow: 0.23rem 0.23rem black;
+        }
+        &:active {
+          transform: translate(0);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .card:hover {
+    transform: rotate(0deg);
+    box-shadow: -10px 10px 5px violet;
+  }
+}
+
+@keyframes show {
+  from {
+    transform: rotate(20deg) translateY(50px);
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    transform: rotate(4deg) translateY(0px);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-show {
+  from {
+    transform: translateY(50px);
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 968px) {
+  #course .cards {
+    width: 100%;
+    /* background-color: #2f3c7d; */
+
+    .card {
+      .extra-info {
+        gap: 5px;
+        span {
+          font-size: 1.2vw;
+        }
+      }
+      h3 {
+        font-size: 3vw;
+      }
+      h4 {
+        font-size: 2vw;
+      }
+      .keywords {
+        span {
+          font-size: 1.5vw;
+        }
+      }
+      .price {
+        gap: 10px;
+        p {
+          font-size: 2vw;
+        }
+        .btn {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #course .cards {
+    /* background-color: #ff8f00; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    /* background-color: #683965; */
+
+    .card {
+      /* width: 90%; */
+      /* background-color: #ff7f00; */
+      transform: rotate(0deg);
+      animation: mobile-show 1s linear;
+      animation-timeline: view(100% -10%);
+
+      &:hover {
+        transform: rotate(0deg);
+        box-shadow: -10px 10px 5px violet;
+      }
+
+      .extra-info {
+        gap: 5px;
+        span {
+          font-size: 1.5vw;
+        }
+      }
+      h3 {
+        font-size: 3.5vw;
+      }
+      h4 {
+        font-size: 2.5vw;
+      }
+      .keywords {
+        span {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  #course .cards {
+    width: 100%;
+    /* padding: 0 10px; */
+    .card {
+      .extra-info {
+        gap: 3px;
+        span {
+          font-size: 2.5vw;
+        }
+      }
+      h3 {
+        font-size: 4.5vw;
+      }
+      h4 {
+        font-size: 3.5vw;
+      }
+      .keywords {
+        span {
+          font-size: 3vw;
+        }
+      }
+      .price {
+        gap: 5px;
+        p {
+          font-size: 3vw;
+        }
+        .btn {
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+}

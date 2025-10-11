@@ -1,6 +1,6 @@
 .button {
   --bg: #000;
-  --hover-bg: #bb90ff;
+  --hover-bg: #b08de8;
   --hover-text: #000;
   color: #fff;
   cursor: pointer;
@@ -15,7 +15,7 @@
   color: var(--hover-text);
   transform: translate(-0.25rem, -0.25rem);
   background: var(--hover-bg);
-  box-shadow: 0.25rem 0.25rem var(--bg);
+  box-shadow: 0.25rem 0.25rem #fff;
 }
 
 .button:active {

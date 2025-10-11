@@ -6,6 +6,35 @@
   background-color: black;
   margin-top: -50px;
   padding-bottom: 100px;
+
+  background-color: hsla(0, 0%, 5%, 1);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 3000 3000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at 27% 38%,
+      hsla(340.537650274185, 85%, 17%, 0.77) 0%,
+      transparent 44.23046172483418%
+    ),
+    radial-gradient(
+      circle at 49% 56%,
+      hsla(276.6176470588236, 89%, 19%, 0.89) 0%,
+      transparent 68.29972231904205%
+    ),
+    radial-gradient(
+      circle at 33% 72%,
+      hsla(241.99999999999997, 94%, 16%, 0.68) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 93% 31%,
+      hsla(240, 100%, 2%, 0.68) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 90% 46%,
+      hsla(241.99999999999997, 94%, 16%, 0.68) 0%,
+      transparent 50%
+    );
+  background-blend-mode: overlay, normal, normal, normal, normal, normal;
 }
 
 #service .infinite-text {
@@ -112,14 +141,16 @@
       text-align: left;
     }
     p {
-      font-family: "Zain", sans-serif;
+      /* font-family: "Zain", sans-serif; */
+      /* font-family: "Audiowide", sans-serif; */
+      font-family: "Bebas Neue", sans-serif;
       /* background-color: lightgreen; */
       width: 50%;
       font-size: 2.2vw;
       span {
         font-weight: 900;
         text-decoration: underline;
-        color: blueviolet;
+        color: rgb(120, 255, 41);
       }
     }
   }
@@ -191,6 +222,7 @@
         }
       }
       p {
+        font-family: "Zain", sans-serif;
         font-size: 3vw;
       }
     }
@@ -203,8 +235,10 @@
   }
   #service .part2inside {
     width: 90%;
+    gap: 50px;
     .card {
       gap: 30px;
+      /* background-color: aqua; */
       .imgcont {
         span {
           font-size: 16vw;
