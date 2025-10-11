@@ -34,6 +34,12 @@
   /* font-family: "Zain", sans-serif; */
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 5;
 }
 
 .background-canvas {

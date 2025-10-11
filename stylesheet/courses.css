@@ -1,12 +1,15 @@
 #course {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  background-color: white;
+  background-color: #fff;
+  margin-top: -20px;
   padding: 0px 20px;
   padding-bottom: 100px;
   width: 100%;
+  z-index: 2;
   height: fit-content;
-  box-sizing: border-box;
+  position: relative;
+  /* box-sizing: border-box; */
 }
 
 #course:has(.card:hover) {
