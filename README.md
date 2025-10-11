@@ -38,3 +38,21 @@ and strictly adheres to the core constraint: **Zero JavaScript or external libra
 Since this project uses only HTML and CSS, setup is minimal:
 
 1. **Clone the Repository:**
+   
+2. **Open the File:**
+Navigate to the project folder and open the `index.html` file directly in your web browser.
+
+No build tools, dependencies, or external libraries are required.
+
+## 🔗 Deployment and Submission Links
+
+To fulfill the hackathon requirements, the project has been deployed and shared across social platforms.
+
+| Item | Status | Link | 
+| ----- | ----- | ----- | 
+| **Live Deployment** | ✅ Deployed | `https://strike.sumeet.live` | 
+| **GitHub Repository** | ✅ Public Source | `https://github.com/sumeet57/coderarmy-hackathon-2` | 
+| **LinkedIn Post** | ✅ Submitted | `https://www.linkedin.com/posts/sumeet-umbalkar_strikeclone-htmlcssonly-webclone-activity-7382789100329680896-Ox3e?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAENdb2IBPOoY4J3zUM90pF8v_O8bQ-hunBc` | 
+| **Twitter Post** | ✅ Submitted | `https://x.com/SumeetUmbalkar/status/1977023382597030078` | 
+
+**Thank you for reviewing my project!**
