@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,15 +40,16 @@
     />
 
     <!-- css file link -->
-    <link rel="stylesheet" href="/stylesheet/utils/background.css" />
+    <!-- <link rel="stylesheet" href="/stylesheet/utils/background.css" /> -->
     <link rel="stylesheet" href="/stylesheet/utils/arrowbutton.css" />
     <link rel="stylesheet" href="/stylesheet/header.css" />
     <link rel="stylesheet" href="/stylesheet/home.css" />
     <link rel="stylesheet" href="/stylesheet/about.css" />
     <link rel="stylesheet" href="/stylesheet/services.css" />
     <link rel="stylesheet" href="/stylesheet/courses.css" />
-    <!-- <link rel="stylesheet" href="/stylesheet/home2.css" /> -->
-    <link rel="stylesheet" href="/stylesheet/hero.css" />
+    <link rel="stylesheet" href="/stylesheet/review.css" />
+    <!-- <link rel="stylesheet" href="/stylesheet/hero.css" /> -->
+    <link rel="stylesheet" href="/stylesheet/strikeExtra.css" />
     <link rel="stylesheet" href="/stylesheet/contact.css" />
     <link rel="stylesheet" href="/stylesheet/footer.css" />
     <title>STRIKE</title>
@@ -37,14 +57,13 @@
   <body>
     <header>
       <nav>
-        <!-- Checkbox must be inside NAV for the sibling selector (~) to work with .fullNav and .menuIcon-->
         <input type="checkbox" id="menu-toggle" hidden />
 
         <div class="left">
-          <!-- <img
+          <img
             src="/assets/14a41f92-f694-4348-8c9f-0b42e0197539-Photoroom.png"
             alt=""
-          /> -->
+          />
           <p>STRIKE</p>
         </div>
 
@@ -52,7 +71,7 @@
         <div class="right">
           <a href="#home">HOME</a>
           <a href="#about">ABOUT</a>
-          <a href="#courses">COURSE</a>
+          <a href="#course">COURSE</a>
           <a class="live-nav" href="#live">LIVE</a>
           <a href="#contact"><i class="fa-solid fa-user"></i></a>
         </div>
@@ -66,18 +85,26 @@
 
         <!-- Mobile Full-Screen Menu -->
         <div class="fullNav">
-          <a href="#home">HOME</a>
-          <a href="#about">ABOUT</a>
-          <a href="#services">SERVICES</a>
-          <a href="#contact">CONTACT</a>
+          <label for="menu-toggle" class="nav-item-close">
+            <a href="#home">HOME</a>
+          </label>
+          <label for="menu-toggle" class="nav-item-close">
+            <a href="#about">ABOUT</a>
+          </label>
+          <label for="menu-toggle" class="nav-item-close">
+            <a href="#course">COURSE</a>
+          </label>
+          <label for="menu-toggle" class="nav-item-close">
+            <a href="#contact">CONTACT</a>
+          </label>
         </div>
       </nav>
     </header>
     <main>
       <section class="s1" id="home">
-        <div class="part1">
+        <!-- <div class="part1">
           <h1 data-content="STRIKE">STRIKE</h1>
-        </div>
+        </div> -->
         <div class="part2">
           <div class="model">
             <img src="/assets/home/rohitmodel.png" alt="" />
@@ -153,7 +180,7 @@
               <span>350+ hrs</span>
             </div>
             <div class="imgcont">
-              <img src="/assets/1.jpg" alt="" />
+              <img src="/assets/6.jpeg" alt="" />
             </div>
             <h3>Data Structures & Algorithms - Advanced</h3>
             <h4>
@@ -166,7 +193,7 @@
               <!-- <span>Competitive Programming</span> -->
             </div>
             <div class="price">
-              <button class="btn" data-bg="red">Enroll Now &rarr;</button>
+              <button class="btn" data-bg="red">Coming soon &rarr;</button>
               <p>₹5999</p>
             </div>
           </div>
@@ -176,9 +203,9 @@
               <span>230+ hrs</span>
             </div>
             <div class="imgcont">
-              <img src="/assets/2.jpg" alt="" />
+              <img src="/assets/3.jpg" alt="" />
             </div>
-            <h3>Fullstack - Generative AI</h3>
+            <h3>Fullstack Development - Generative AI</h3>
             <h4>
               Fullstack AI Development: Building Intelligent Applications with
               Generative AI
@@ -188,7 +215,7 @@
               <span>Real-World Projects</span>
             </div>
             <div class="price">
-              <button class="btn" data-bg="red">Enroll Now &rarr;</button>
+              <button class="btn" data-bg="red">Coming soon &rarr;</button>
               <p>₹7999</p>
             </div>
           </div>
@@ -362,17 +389,17 @@
       <section class="s3" id="service">
         <div class="infinite-text">
           <ul>
-            <li>what we do</li>
+            <li>what we provide</li>
             &Star;
-            <li>our mission</li>
+            <li>our expertise</li>
             &Star;
             <li>our vision</li>
             &Star;
           </ul>
           <ul aria-hidden="true">
-            <li>what we do</li>
+            <li>what we provide</li>
             &Star;
-            <li>our mission</li>
+            <li>our expertise</li>
             &Star;
             <li>our vision</li>
             &Star;
@@ -382,10 +409,6 @@
           <div class="part2inside">
             <div class="card">
               <div class="imgcont">
-                <!-- <img
-                  src="/assets/about/1.png"
-                  alt="Structured DSA & Interview Preparation"
-                /> -->
                 <span
                   ><i
                     class="fa-solid fa-atom fa-bounce"
@@ -400,15 +423,7 @@
               </p>
             </div>
             <div class="card">
-              <p>
-                Hands-on <span>AI projects and labs</span> to help you build
-                real-world applications using cutting-edge AI technologies.
-              </p>
               <div class="imgcont">
-                <!-- <img
-                  src="/assets/about/2.png"
-                  alt="Generative AI Projects & Labs"
-                /> -->
                 <span>
                   <span class="fa-bounce">
                     <i
@@ -418,13 +433,13 @@
                   </span>
                 </span>
               </div>
+              <p>
+                Hands-on <span>AI projects and labs</span> to help you build
+                real-world applications using cutting-edge AI technologies.
+              </p>
             </div>
             <div class="card">
               <div class="imgcont">
-                <!-- <img
-                  src="/assets/about/3.png"
-                  alt="Mock Interviews & Career Guidance"
-                /> -->
                 <span>
                   <i
                     class="fa-solid fa-person-chalkboard fa-bounce"
@@ -439,15 +454,7 @@
               </p>
             </div>
             <div class="card">
-              <p>
-                <span>Certificate of completion and placement assistance</span>
-                to help you showcase your skills and land your dream job.
-              </p>
               <div class="imgcont">
-                <!-- <img
-                  src="/assets/about/4.png"
-                  alt="Certificate & Placement Assistance"
-                /> -->
                 <span>
                   <i
                     class="fa-solid fa-user-graduate fa-bounce"
@@ -455,52 +462,227 @@
                   ></i>
                 </span>
               </div>
+              <p>
+                <span>Certificate of completion and placement assistance</span>
+                to help you showcase your skills and land your dream job.
+              </p>
             </div>
           </div>
           <div class="vertLine"></div>
         </div>
       </section>
-      <!-- <section class="s1" id="home2">
+      <section id="review">
+        <div class="infinite-text">
+          <ul style="color: #fff">
+            <li>Our testimonial</li>
+            &Star;
+            <li>our testimonial</li>
+            &Star;
+            <li>our testimonial</li>
+            &Star;
+          </ul>
+          <ul aria-hidden="true" style="color: #fff">
+            <li>Our testimonial</li>
+            &Star;
+            <li>our testimonial</li>
+            &Star;
+            <li>our testimonial</li>
+            &Star;
+          </ul>
+        </div>
         <div class="cont">
-          <div style="--i: 1">
-            <span><img src="/assets/1.jpg" alt="" /></span>
+          <div class="card" style="--i: 1">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHN0dWRlbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+                  alt="User Photo: Akash Sharma"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">Akash Sharma</h3>
+                  <p class="user-role">Software Engineer, Google</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  The **DSA course** here is the gold standard! I finally
+                  cracked the graph algorithms section that had been blocking me
+                  for months. Within 3 weeks of finishing, I **aced my technical
+                  interviews** and secured my dream role.
+                </p>
+              </div>
+            </div>
           </div>
-          <div style="--i: 2">
-            <span><img src="/assets/2.jpg" alt="" /></span>
-          </div>
-          <div style="--i: 3">
-            <span><img src="/assets/3.jpg" alt="" /></span>
-          </div>
-          <div style="--i: 4">
-            <span><img src="/assets/4.jpg" alt="" /></span>
-          </div>
-          <div style="--i: 5">
-            <span><img src="/assets/5.jpeg" alt="" /></span>
-          </div>
-          <div style="--i: 6">
-            <span><img src="/assets/6.jpeg" alt="" /></span>
-          </div>
-          <div style="--i: 7">
-            <span><img src="/assets/7.jpeg" alt="" /></span>
-          </div>
-        </div>
 
-        <div class="hero">
-          <img
-            src="/assets/14a41f92-f694-4348-8c9f-0b42e0197539-Photoroom.png"
-            alt=""
-          />
-        </div>
+          <div class="card" style="--i: 2">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=60&w=600&h=600"
+                  alt="User Photo: Priya Patel"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">Priya Patel</h3>
+                  <p class="user-role">AI/ML Researcher</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  Strike's **Generative AI course** is cutting-edge. The deep
+                  dive into LLM architecture and fine-tuning with hands-on
+                  projects gave me a huge competitive advantage. It's practical
+                  knowledge, not just theory.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div class="extra">
-          <i class="ri-arrow-down-line"></i>
-          Scroll
-        </div>
+          <div class="card" style="--i: 3">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpbmVzZSUyMHN0dWRlbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+                  alt="User Photo: Chen Wei"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">Chen Wei</h3>
+                  <p class="user-role">Incoming Data Scientist, Meta</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  I was a beginner in DSA, but the structured learning path at
+                  Strike made complex topics feel simple. I highly recommend the
+                  ** course bundle **—it's the best investment I've made for my
+                  career transition. Great value!
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div class="page-tear">
-          <img src="/assets/paper-tear.png" alt="" />
+          <div class="card" style="--i: 4">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&q=60&w=600&h=600"
+                  alt="User Photo: Omar Khan"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">Omar Khan</h3>
+                  <p class="user-role">Lead Developer, FinTech Startup</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  The Gen AI prompt engineering module was a game-changer for my
+                  team's productivity. We immediately implemented the techniques
+                  learned, and it has drastically cut down our development time.
+                  Excellent!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="--i: 5">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?auto=format&fit=crop&q=60&w=600&h=600"
+                  alt="User Photo: Sarah Lee"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">Sarah Lee</h3>
+                  <p class="user-role">Student, Comp Sci</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  I struggled with competitive coding, but the clear
+                  explanations and massive **practice problem sets** in the DSA
+                  track gave me the confidence I needed. The live doubt-clearing
+                  sessions are truly invaluable.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="--i: 6">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=60&w=600&h=600"
+                  alt="User Photo: Robert Green"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">Robert Green</h3>
+                  <p class="user-role">Senior Product Manager</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  I took the GenAI course to better understand the technology
+                  behind my product. It gave the technical fluency to
+                  communicate effectively with my engineering team and make
+                  informed decisions on model deployment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="--i: 7">
+            <div class="testimonial-card">
+              <div class="user-info">
+                <img
+                  src="https://images.unsplash.com/photo-1596496050756-93ba991aae15?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGFtZXJpY2FuJTIwc3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+                  alt="User Photo: David Chen"
+                  class="user-photo"
+                />
+                <div class="user-details">
+                  <h3 class="user-name">David Chen</h3>
+                  <p class="user-role">Platform Developer, Microsoft</p>
+                </div>
+              </div>
+              <div class="testimonial-review">
+                <p>
+                  The advanced DSA modules on **Dynamic Programming and Trees**
+                  were incredibly detailed. This course refined my
+                  problem-solving approach and immediately improved the
+                  performance of the code I write daily.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section> -->
+      </section>
+      <section id="strike-extra">
+        <div class="p1">
+          <h3>JOIN STRIKE <i class="fa-solid fa-arrow-right fa-shake"></i></h3>
+          <h4>
+            STRIKE is not just another coding course platform. We are dedicated
+            to providing high-quality, practical education that empowers you to
+            excel in the real world.
+          </h4>
+          <button>
+            <a href="#course"> Explore Courses &rarr; </a>
+          </button>
+        </div>
+        <div class="p2">
+          <div class="text">
+            <h3>Coupon code</h3>
+            <p>Avail 20% off on all courses for first 100 students</p>
+          </div>
+          <div class="coupon">
+            <h5>STRIKE100</h5>
+          </div>
+          <button>Copy code</button>
+        </div>
+      </section>
       <section id="contact">
         <div class="background-canvas">
           <div class="contact-container">
@@ -510,7 +692,7 @@
 
               <div class="info-list">
                 <div class="info-item">
-                  <i class="fas fa-envelope"></i>
+                  <i class="fa-solid fa-at"></i>
                   <div>
                     <h3>Email</h3>
                     <p>support@strike.com</p>
@@ -518,7 +700,7 @@
                 </div>
 
                 <div class="info-item">
-                  <i class="fas fa-phone-alt"></i>
+                  <i class="fa-solid fa-phone"></i>
                   <div>
                     <h3>Phone</h3>
                     <p>+91-8397238292</p>
@@ -526,7 +708,7 @@
                 </div>
 
                 <div class="info-item">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fa-solid fa-location-dot"></i>
                   <div>
                     <h3>Office</h3>
                     <p>Mumbai, India</p>
@@ -535,11 +717,15 @@
               </div>
 
               <div class="social-icons">
-                <a href="#" class="icon-link"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="icon-link"
-                  ><i class="fab fa-linkedin-in"></i
+                  ><i class="fa-brands fa-twitter"></i
                 ></a>
-                <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="icon-link"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="#" class="icon-link"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
               </div>
             </div>
 
@@ -603,16 +789,20 @@
       <footer class="site-footer">
         <div class="footer-main-content">
           <div class="footer-column footer-brand">
-            <p class="logo-text">&lt;STRIKE /&gt;</p>
+            <p class="logo-text">STRIKE</p>
             <p class="tagline">
               Crafting modern digital experiences with code and passion.
             </p>
             <div class="footer-social">
-              <a href="#" class="icon-link"><i class="fab fa-twitter"></i></a>
               <a href="#" class="icon-link"
-                ><i class="fab fa-linkedin-in"></i
+                ><i class="fa-brands fa-twitter"></i
               ></a>
-              <a href="#" class="icon-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="icon-link"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#" class="icon-link"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </div>
           </div>
 
@@ -630,34 +820,28 @@
           </div>
 
           <div class="footer-column">
-            <h3>Contact</h3>
-            <div class="contact-detail">
-              <i class="fas fa-envelope"></i>
-              <p>support@strike.com</p>
-            </div>
-            <div class="contact-detail">
-              <i class="fas fa-phone-alt"></i>
-              <p>+91-9832742332</p>
-            </div>
-            <div class="contact-detail">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Mumbai, India</p>
-            </div>
-          </div>
+            <h3>Company</h3>
 
-          <div class="footer-column footer-cta">
-            <h3>Any Query ?</h3>
-            <p>
-              Ready to transform your brand? Let's discuss your vision today.
-            </p>
-            <a href="#" class="cta-button"
-              >Contact Us <i class="fas fa-arrow-right"></i
-            ></a>
+            <div class="contact-detail">
+              <i class="fa-solid fa-building-shield"></i>
+              <a href="/privacy">privacy policy</a>
+            </div>
+            <div class="contact-detail">
+              <i class="fa-solid fa-image-portrait"></i>
+              <a href="/privacy">about us</a>
+            </div>
+            <div class="contact-detail">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <a href="/privacy">Refund</a>
+            </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2025 STRIKE. All rights reserved.</p>
+          <p>
+            &copy; 2025 STRIKE. Hackathon project by
+            <a href="https://sumeet.live"> sumeet </a>
+          </p>
         </div>
       </footer>
     </main>

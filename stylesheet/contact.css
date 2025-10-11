@@ -20,15 +20,56 @@
 
 #contact {
   width: 100%;
-  min-height: 100vh;
+  min-height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #1a1a1a, #121212);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+
+  background-color: hsla(224, 70%, 17%, 1);
+  background-image: radial-gradient(
+      circle at 91% 91%,
+      hsla(276, 72%, 4%, 0.46) 10%,
+      transparent 57%
+    ),
+    radial-gradient(
+      circle at 90% 84%,
+      hsla(197, 57%, 0%, 1) 17%,
+      transparent 81%
+    ),
+    radial-gradient(
+      circle at 63% 76%,
+      hsla(274, 90%, 2%, 1) 4%,
+      transparent 63%
+    ),
+    radial-gradient(
+      circle at 64% 25%,
+      hsla(271, 68%, 19%, 1) 10%,
+      transparent 66%
+    ),
+    radial-gradient(
+      circle at 82% 4%,
+      hsla(269, 82%, 4%, 1) 12%,
+      transparent 73%
+    ),
+    radial-gradient(
+      circle at 75% 55%,
+      hsla(222, 85%, 21%, 1) 13%,
+      transparent 84%
+    ),
+    radial-gradient(
+      circle at 50% 4%,
+      hsla(218, 79%, 9%, 1) 17%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 13% 9%,
+      hsla(276, 74%, 4%, 1) 10%,
+      transparent 57%
+    );
+  background-blend-mode: normal, normal, normal, normal, normal, normal, normal,
+    normal;
+
   position: relative;
   overflow: hidden;
   /* font-family: "Zain", sans-serif; */
@@ -39,7 +80,7 @@
   border-top-right-radius: 40px;
   margin-top: -40px;
   position: relative;
-  z-index: 5;
+  z-index: 6;
 }
 
 .background-canvas {

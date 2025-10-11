@@ -22,20 +22,22 @@ header nav {
 }
 
 header nav .left {
-  max-height: 45px;
+  /* height: 50px; */
   font-size: 20px;
   /* background-color: aqua; */
   /* font-family: "Rampart One", sans-serif; */
   font-family: "Audiowide", sans-serif;
   color: white;
   z-index: 10;
+  display: flex;
 
-  /* img {
+  img {
     object-fit: contain;
-    height: 40px;
-    width: 50px;
-    background-color: yellow;
-  } */
+    height: 30px;
+    width: 30px;
+    /* background-color: yellow; */
+    border-radius: 10px;
+  }
 
   p {
     margin: 0px;
@@ -114,17 +116,38 @@ header nav .fullNav {
   z-index: 9;
 }
 
-header nav .fullNav a {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  letter-spacing: 3px;
-  margin: 20px 0;
-  /* font-family: "Workbench", sans-serif; */
-  font-family: "Audiowide", sans-serif;
-  transition: color 0.3s;
-}
+header nav .fullNav label {
+  display: block;
+  margin-bottom: 40px;
+  cursor: pointer;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 20px 0;
+    /* font-family: "Workbench", sans-serif; */
+    font-family: "Audiowide", sans-serif;
+    transition: color 0.3s;
+    position: relative;
 
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      background-color: greenyellow;
+      transform: scaleX(0);
+      width: 100%;
+      height: 2px;
+      transition: transform 250ms ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
 header nav .fullNav a:hover {
   color: orange;
 }
@@ -167,6 +190,10 @@ header nav .menuIcon .bar {
   }
   header nav .left {
     font-size: 20px;
+    img {
+      height: 25px;
+      width: 25px;
+    }
   }
   header nav .right {
     display: none;
@@ -186,6 +213,10 @@ header nav .menuIcon .bar {
     padding: 20px 10px;
   }
   header nav .left {
-    font-size: 15px;
+    font-size: 20px;
+    img {
+      height: 25px;
+      width: 25px;
+    }
   }
 }

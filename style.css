@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #19014a;
+  --secondary-color: #a998b6;
+  --accent-color: #44ff00;
+  --dark-bg: #1a1a1a;
+  --text: #f0f0f0;
+  --highlight-text: #d0ff00;
+  --form-bg: #181717;
+}
+
 body {
   font-family: Arial, sans-serif;
   box-sizing: border-box;

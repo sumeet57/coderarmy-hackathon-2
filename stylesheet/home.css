@@ -1,15 +1,8 @@
-/* font-family: "Rampart One", sans-serif; */
-/* font-family: "Zain", sans-serif; */
-/* font-family: "Rubik Glitch", system-ui; */
-
 main {
   width: 100%;
   height: 100vh;
   position: relative;
-  /*want grid of coloumn 1 only*/
-  /* padding-top: 50px; */
   background-color: #000;
-  /* overflow: hidden; */
 }
 
 main #home {
@@ -17,73 +10,55 @@ main #home {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: fit-content;
+  padding: 50px 0px;
+  padding-top: 80px;
   width: 85%;
-  /* background-color: #00ff99; */
   position: relative;
   text-align: center;
   margin: auto;
   overflow: hidden;
 }
 
-main #home .part1 {
-  height: 35%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  /* z-index: 1; */
-  /* align-items: center; */
-  /* background-color: violet; */
-  gap: 20px;
-  h1 {
-    text-align: center;
-    font-size: 12vw;
-    color: white;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: "Rampart One", sans-serif;
-    letter-spacing: -2px;
-    line-height: 1.1;
-    /* animation: heading-glow 10s linear infinite; */
-    animation: home-slideup 1s linear, h1-animation 1s infinite alternate;
-    margin: 0px;
-    /* z-index: 7; */
-    position: relative;
-    transition: transform 0.5s cubic-bezier(0.8, -0.5, 0.2, 1.8);
-
-    text-shadow: 5px 5px 20px thistle;
-  }
-
-  h1::after {
-    position: absolute;
-    content: attr(data-content);
-    inset: 0 0 0 0;
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
-    z-index: 2;
-  }
-}
-
 main #home .part2 {
-  height: 65%;
+  height: 100%;
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: start;
   position: relative;
   overflow: visible;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
+  background-color: hsla(88.26775280898873, 0%, 0%, 1);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1356 1356' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at 0% 99%,
+      hsla(88.70242603644859, 0%, 0%, 1) 0%,
+      transparent 67%
+    ),
+    radial-gradient(
+      circle at 46% 94%,
+      hsla(89.13915310222625, 0%, 0%, 1) 0%,
+      transparent 81%
+    ),
+    radial-gradient(
+      circle at 93% 95%,
+      hsla(87.48114495172278, 0%, 0%, 1) 0%,
+      transparent 66%
+    ),
+    radial-gradient(
+      circle at 89% 8%,
+      hsla(88.65168539325842, 72%, 47%, 1) 0%,
+      transparent 150%
+    );
+  background-blend-mode: overlay, normal, normal, normal, normal;
   animation: home-slideup 1s linear;
+  padding: 20px 0px;
 
   .model {
     height: 100%;
     width: 100%;
     position: absolute;
-    /* overflow-x: visible; */
-    /* background-color: #00ff00; */
     z-index: 1;
 
     img {
@@ -110,7 +85,6 @@ main #home .part2 {
     flex-direction: column;
     z-index: 2;
     gap: 35px;
-    /* background-color: aliceblue; */
 
     .hero {
       width: fit-content;
@@ -132,7 +106,6 @@ main #home .part2 {
     h1 {
       margin: 0px;
       font-family: "Audiowide", sans-serif;
-      /* font-family: "Notable", sans-serif; */
       font-size: 2.5vw;
       text-align: left;
       font-weight: 900;
@@ -140,17 +113,12 @@ main #home .part2 {
       text-transform: capitalize;
       color: #fff;
       text-shadow: 5px 5px 20px #fff;
-
-      /* -webkit-text-stroke: 1px paleturquoise; */
-      /* color: transparent; */
       span {
-        /* font-family: "Audiowide", sans-serif; */
         font-family: "Notable", sans-serif;
         letter-spacing: 2px;
         font-weight: 100;
         font-style: italic;
         color: white;
-        /* animation: heading-glow 1s linear infinite; */
       }
     }
 
@@ -164,12 +132,10 @@ main #home .part2 {
       color: #fff;
 
       span {
-        /* font-family: "Audiowide", sans-serif; */
         letter-spacing: 2px;
         font-weight: 900;
         font-style: italic;
         color: gold;
-        /* animation: heading-glow 1s linear infinite; */
       }
     }
 
@@ -190,11 +156,10 @@ main #home .part2 {
     align-items: start;
     z-index: 2;
     gap: 20px;
-    /* background-color: turquoise; */
 
     .card {
       text-align: left;
-      width: 350px;
+      width: 100%;
       padding: 20px;
       border-radius: 10px;
       background-color: #00000030;
@@ -297,7 +262,7 @@ main #home .part2 {
 .extra {
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: 30px;
   transform: translateX(-50%);
   color: #fff;
   font-family: "Audiowide", sans-serif;
@@ -306,8 +271,6 @@ main #home .part2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* gap: 2px; */
-  /* animation: float 700ms infinite alternate; */
 }
 
 @keyframes code-move {

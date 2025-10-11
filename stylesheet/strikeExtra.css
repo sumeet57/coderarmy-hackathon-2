@@ -1,0 +1,250 @@
+#strike-extra {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsla(88.26775280898873, 0%, 0%, 1);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1356 1356' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at 0% 99%,
+      hsla(88.70242603644859, 0%, 0%, 1) 0%,
+      transparent 67%
+    ),
+    radial-gradient(
+      circle at 46% 94%,
+      hsla(89.13915310222625, 0%, 0%, 1) 0%,
+      transparent 81%
+    ),
+    radial-gradient(
+      circle at 93% 95%,
+      hsla(87.48114495172278, 0%, 0%, 1) 0%,
+      transparent 66%
+    ),
+    radial-gradient(
+      circle at 89% 8%,
+      hsla(88.65168539325842, 72%, 47%, 1) 0%,
+      transparent 150%
+    );
+  background-blend-mode: overlay, normal, normal, normal, normal;
+
+  padding: 100px 40px;
+  position: relative;
+  z-index: 5;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -40px;
+  background-color: bisque;
+
+  .p1 {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    h3 {
+      width: 100%;
+      margin: 0;
+      font-family: "Audiowide", sans-serif;
+      font-size: 3.5vw;
+      color: #000;
+      text-shadow: 2px 2px 8px #fff;
+      text-align: left;
+      z-index: 2;
+      visibility: hidden;
+      animation: reveal 1s forwards;
+      animation-timeline: view(50% 10%);
+    }
+
+    h4 {
+      width: 100%;
+      margin: 0;
+      font-family: "Zain", sans-serif;
+      font-size: 1.5vw;
+      color: #d2d2d2;
+      text-align: left;
+      width: 60%;
+      z-index: 2;
+      visibility: hidden;
+      animation: reveal 1s forwards;
+      animation-timeline: view(50% 10%);
+    }
+    button {
+      /* width: 100%; */
+      margin-top: 20px;
+      font-size: 1.3vw;
+      z-index: 2;
+      text-align: left;
+      padding: 8px 10px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: "Zain", sans-serif;
+      visibility: hidden;
+      animation: reveal 1s forwards;
+      animation-timeline: view(50% 10%);
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:hover {
+        /* background-color: orange; */
+        /* color: #fff; */
+        transition: 0.3s;
+        box-shadow: 5px 5px 1px orange;
+        transform: translate(-0.25rem, -0.25rem);
+      }
+      &:active {
+        transform: translate(0);
+        box-shadow: none;
+      }
+    }
+  }
+  .p2 {
+    width: 40%;
+    height: fit-content;
+    background-color: black;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+    visibility: hidden;
+    animation: coupon-ani 1s forwards;
+    animation-timeline: view(50% 10%);
+
+    .text {
+      height: 25%;
+      width: 100%;
+      font-family: "Zain", sans-serif;
+
+      h3 {
+        font-size: 2vw;
+      }
+      h4 {
+        font-size: 1.2vw;
+      }
+    }
+    .coupon {
+      height: 65%;
+      width: 100%;
+      font-size: 3vw;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Audiowide", sans-serif;
+      padding: 50px 0;
+      color: greenyellow;
+      border: 2px dashed #fff;
+    }
+
+    button {
+      margin-top: 10px;
+      font-size: 1.1vw;
+      z-index: 2;
+      text-align: left;
+      padding: 5px 10px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: "Zain", sans-serif;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:hover {
+        /* background-color: orange; */
+        /* color: #fff; */
+        transition: 0.3s;
+        box-shadow: 5px 5px 1px orange;
+        transform: translate(-0.25rem, -0.25rem);
+      }
+      &:active {
+        transform: translate(0);
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@keyframes coupon-ani {
+  from {
+    transform: translateY(30px);
+    filter: blur(10px);
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  #strike-extra {
+    flex-direction: column;
+    padding: 100px 20px;
+    gap: 30px;
+
+    .p1 {
+      width: 100%;
+      h3 {
+        font-size: 6vw;
+      }
+
+      h4 {
+        font-size: 4vw;
+        width: 100%;
+      }
+      button {
+        font-size: 3.5vw;
+        padding: 10px 15px;
+      }
+    }
+
+    .p2 {
+      width: 100%;
+
+      .text {
+        h3 {
+          font-size: 4vw;
+        }
+        h4 {
+          font-size: 3vw;
+        }
+      }
+      .coupon {
+        font-size: 6vw;
+        padding: 30px 0;
+      }
+      button {
+        font-size: 3vw;
+        padding: 8px 12px;
+      }
+    }
+  }
+}
